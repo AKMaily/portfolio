@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Rubik+Mono+One&display=swap&family=Lavishly+Yours"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./atomic.css">
+</head>
+
+<body>
+    <header>
+        <p> Stylesheet</p>
+    </header>
+    <main>
+        {% include logo.html %}
+        <div id="target"></div>
+        <script>
+            const template = document.getElementById("logo-template");
+            document.getElementById("target").appendChild(template.content.cloneNode(true));
+        </script>
+        <div class="styling">
+            <div class="text">
+                <h1> H1 </h1>
+                <h2> H2 </h2>
+                <h3> H3 </h3>
+                <h4> H4</h4>
+                <p> paragraph </p>
+                <small> smalltext </small>
+            </div>
+            <div class="color-classes">
+                <div class="colors">
+                    <h4>Textcolors:</h4>
+                    <svg width="300px" height="60px">
+                        <rect x="0" fill="var(--primary-text)"></rect>
+                        <rect x="50" fill="var(--secondary-text)"></rect>
+                        <rect x="100" fill="var(--tertiary-text)"></rect>
+                        <rect x="150" fill="var(--forth-text)"></rect>
+                        <rect x="200" fill="var(--fifth-text)"></rect>
+                        <rect x="250" fill="var(--sixt-text)"></rect>
+                    </svg>
+                </div>
+                <div class="colors">
+                    <h4>Backgroundcolors:</h4>
+                    <svg width="300px" height="60px">
+                        <rect x="0" fill="var(--primary-background)"></rect>
+                        <rect x="50" fill="var(--secondary-background)"></rect>
+                        <rect x="100" fill="var(--tertiary-background)"></rect>
+                        <rect x="150" fill="var(--forth-background)"></rect>
+                        <rect x="200" fill="var(--fifth-background)"></rect>
+                        <rect x="250" fill="var(--sixt-background)"></rect>
+                    </svg>
+                </div>
+                <div class="colors">
+                    <h4>Accent Colors: </h4>
+                    <svg width="300px" height="60px">
+                        <rect x="0" fill="var(--primary-color)"></rect>
+                        <rect x="100" fill="var(--secondary-color)"></rect>
+                    </svg>
+                </div>
+            </div>
+            <div class="elements">
+                <div class="buttons">
+                    <button class="primary">Primary </button>
+                    <button class="secondary">Secondary </button>
+                    <button class="tertiary">Tertiary</button>
+                    <button disabled> Disabled</button>
+                </div>
+                <div class="links">
+                    <a class="primary">Primary Link </a>
+                    <a class="secondary">Secondary Link</a>
+                    <a class="tertiary">Tertiary Link</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
