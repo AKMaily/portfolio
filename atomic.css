@@ -156,6 +156,65 @@ button.tertiary:active {
     border: 1px solid var(--secondary-color-darken);
 }
 
+a {
+    text-underline-offset: 1px;
+    cursor: pointer;
+}
+
+a.primary {
+    color: var(--primary-color);
+}
+
+a.secondary {
+    color: var(--secondary-color);
+}
+
+a.tertiary {
+    color: var(--primary-text);
+    text-decoration: underline var(--primary-text);
+}
+
+a.primary:hover {
+    text-decoration: underline var(--primary-color);
+}
+
+a.secondary:hover {
+    text-decoration: underline var(--secondary-color);
+}
+
+a.tertiary:hover {
+    color: var(--secondary-text);
+    text-decoration: underline var(--secondary-text);
+}
+
+a.primary:active {
+    color: var(--primary-color-darken);
+}
+
+a.secondary:active {
+    color: var(--secondary-color-darken);
+}
+
+a.tertiary:active {
+    color: var(--secondary-text);
+    text-decoration: none;
+}
+
+a.primary:visited {
+    color: var(--primary-color-darken);
+    text-decoration: none;
+}
+
+a.secondary:visited {
+    color: var(--secondary-color-darken);
+    text-decoration: none;
+}
+
+a.primary:visited {
+    color: var(--secondary-text);
+    text-decoration: none;
+}
+
 
 /** Stylesheet styles */
 
