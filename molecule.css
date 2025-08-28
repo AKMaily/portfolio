@@ -1,0 +1,72 @@
+nav {
+    display: flex;
+    align-items: center;
+    padding: var(--space-5) var(--space-7);
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-7);
+    margin-left: auto;
+    list-style: none;
+}
+
+.skill-section {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--tertiary-background);
+    overflow-x: hidden;
+    padding: var(--space-5);
+}
+
+.skill-section .skill-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-9);
+    list-style: none;
+    animation: scrollAnim 22s infinite linear;
+    width: max-content;
+}
+
+.skill-section ul li {
+    color: var(--tertiary-text);
+    transition: 200ms ease-in-out;
+    min-width: max-content;
+}
+
+@keyframes scrollAnim {
+    to {
+        transform: translateX(calc(-50% - 0.5rem));
+    }
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-5);
+    text-align: left;
+    max-width: 40%;
+}
+
+.project-content .project-skills ul {
+    display: flex;
+    flex-flow: wrap row;
+    color: var(--forth-text);
+    font-size: var(--font-size-7);
+    gap: var(--space-5);
+    list-style: none;
+    margin-left: auto;
+    padding-left: 0;
+}
+
+.project-content .project-skills li {
+    background-color: var(--secondary-color-darken-alpha);
+    border-radius: 30px;
+    padding: var(--space-2);
+    min-width: max-content;
+}
+
+.project-content button {
+    align-self: flex-end;
+}
