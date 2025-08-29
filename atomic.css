@@ -45,6 +45,30 @@
     /*TODO: letter-spacings */
 }
 
+@media screen and (max-width: 1400px) {
+    :root {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    :root {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    :root {
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    :root {
+        font-size: 6px;
+    }
+}
+
 body {
     background-color: var(--primary-background);
     font-family: "Atkinson Hyperlegible Mono", sans-serif;
