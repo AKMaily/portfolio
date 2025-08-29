@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Rubik+Mono+One&display=swap&family=Lavishly+Yours"
+        href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Rubik+Mono+One&display=swap&family=Lavishly+Yours"
         rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -16,14 +16,29 @@
     {% include navbar.html %}
     <header>
         <div class="text-container">
-            <h3> Hi, I'm Anna </h3>
-            <h1 style="color: var(--primary-color)"> Software Developer </h1>
+            <div class="name-text-container">
+                <h3 id="name-text"></h3>
+                <span class="blinking-cursor">
+                    <h3>_</h3>
+                </span>
+            </div>
+            <h1 style="color: transparent">Software Developer</h1>
+            <svg class="distort">
+                <filter id="distortionFilter">
+                    <feTurbulence type="fractalNoise" baseFrequency="2.08 .08" numOctaves="5" seed="2"
+                        stitchTiles="noStitch" x="0%" y="0%" width="100%" height="100%" result="noise"></feTurbulence>
+                    <feDisplacementMap in="SourceGraphic" in2="noise" scale="100" xChannelSelector="R"
+                        yChannelSelector="B" x="0%" y="0%" width="100%" height="100%" filterUnits="userSpaceOnUse">
+                    </feDisplacementMap>
+                </filter>
+            </svg>
         </div>
     </header>
 </body>
 <footer>
 
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 <script src="./main.js"></script>
 
 </html>
