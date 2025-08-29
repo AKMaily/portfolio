@@ -15,7 +15,7 @@ nav ul {
 .skill-section {
     display: flex;
     flex-direction: row;
-    background-color: var(--tertiary-background);
+    background-color: var(--primary-color-darken-alpha);
     overflow-x: hidden;
     padding: var(--space-5);
 }
